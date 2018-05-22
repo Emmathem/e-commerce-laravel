@@ -1,0 +1,101 @@
+/**
+ * @author
+ * Falua Temitope Oyewole
+ * faluatemitope@gmail.com
+ * 22nd of May, 2018
+ */
+
+@import "_partials/_fonts";
+@import "_partials/_vars";
+
+ * {
+     margin: 0;
+     box-sizing: border-box;
+ }
+html, body {
+    @include font-raleway;
+    width: 100%;
+    height: 100%;
+}
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+header {
+    width: 100%;
+    height: 3.4em;
+    position: absolute;
+    z-index: 2;
+    .navbar {
+        border-radius: 0;
+        border: none;
+    }
+    nav, .nav {
+        border-radius:0;
+        border: none;
+        .underline {
+            position: relative;
+            overflow: hidden;
+            display: inline;
+            &::after {
+                content: "";
+                position: absolute;
+                z-index:-1;
+                right: 0;
+                width: 0;
+                bottom: -5px;
+                background: #00acee;
+                height: 2px;
+                transition-property: width;
+                transition: 0.3s ease-out;
+            }
+            &:hover, :focus, :active {
+                &::after {
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                }
+            }
+        }
+        li {
+            a {
+                color: $theme-white;
+                &:hover {
+                    background: none;
+                    color:$theme-p-white;
+                }
+                &:focus {
+                    background: none;
+                }
+            }
+        }
+    }
+}
+section {
+    position: relative;
+    width: 100%;
+}
+.landing {
+    height: 70vh;
+    background: rgb(40, 38, 50);
+    padding-top: 3em;
+}

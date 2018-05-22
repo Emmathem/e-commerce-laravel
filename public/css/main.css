@@ -1,0 +1,123 @@
+/**
+ * @author
+ * Falua Temitope Oyewole
+ * faluatemitope@gmail.com
+ * 22nd of May, 2018
+ */
+
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: 84px;
+}
+
+.links > a {
+  color: #636b6f;
+  padding: 0 25px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header {
+  width: 100%;
+  height: 3.4em;
+  position: absolute;
+  z-index: 2;
+}
+
+header .navbar {
+  border-radius: 0;
+  border: none;
+}
+
+header nav,
+header .nav {
+  border-radius: 0;
+  border: none;
+}
+
+header nav .underline,
+header .nav .underline {
+  position: relative;
+  overflow: hidden;
+  display: inline;
+}
+
+header nav .underline::after,
+header .nav .underline::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
+  bottom: -5px;
+  background: #00acee;
+  height: 2px;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+header nav .underline:hover::after,
+header nav .underline :focus::after,
+header nav .underline :active::after,
+header .nav .underline:hover::after,
+header .nav .underline :focus::after,
+header .nav .underline :active::after {
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+header nav li a,
+header .nav li a {
+  color: #F7F7FF;
+}
+
+header nav li a:hover,
+header .nav li a:hover {
+  background: none;
+  color: #FFFFFF;
+}
+
+header nav li a:focus,
+header .nav li a:focus {
+  background: none;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+.landing {
+  height: 70vh;
+  background: #282632;
+  padding-top: 3em;
+}
+
