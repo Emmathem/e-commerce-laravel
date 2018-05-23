@@ -76,7 +76,11 @@ module.exports = __webpack_require__(45);
 /***/ 45:
 /***/ (function(module, exports) {
 
+// functions are written here
 
+$(window).scroll(function () {
+    if ($(this).scrollTop() >= 1) $('nav').addClass('scrolled');else $('nav').removeClass('scrolled');
+});
 
 /***/ })
 

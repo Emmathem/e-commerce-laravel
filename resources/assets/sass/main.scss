@@ -55,14 +55,13 @@ header {
         .underline {
             position: relative;
             overflow: hidden;
-            display: inline;
             &::after {
                 content: "";
                 position: absolute;
                 z-index:-1;
                 right: 0;
                 width: 0;
-                bottom: -5px;
+                bottom: 0;
                 background: #00acee;
                 height: 2px;
                 transition-property: width;
@@ -97,5 +96,18 @@ section {
 .landing {
     height: 70vh;
     background: rgb(40, 38, 50);
-    padding-top: 3em;
+    .inner-landing {
+      padding: 4em 0 0 0;
+      border:1px solid #fff;
+      .col-3 {
+        width: 30.3%;
+        min-height: 1px;
+        float: left;
+      }
+      .col-5 {
+        width: 60%;
+        float: left;
+        border: 1px solid #fff;
+      }
+    }
 }
