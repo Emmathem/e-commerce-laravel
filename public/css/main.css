@@ -109,19 +109,55 @@ header .nav li a:focus {
   background: none;
 }
 
+header nav.scrolled,
+header .nav.scrolled {
+  position: fixed;
+  padding: 2em 5em;
+  background: #FFFFFF;
+  top: 0;
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  width: 100%;
+  -webkit-animation: slideInDown 5ms 2ms .3s;
+          animation: slideInDown 5ms 2ms .3s;
+}
+
+@media (max-width: 768px) {
+  header nav.scrolled,
+  header .nav.scrolled {
+    padding: 0em 2em;
+  }
+}
+
+header nav.scrolled li a,
+header .nav.scrolled li a {
+  color: black;
+}
+
+header nav.scrolled li a:hover,
+header .nav.scrolled li a:hover {
+  color: #FFFFFF;
+}
+
 section {
   position: relative;
   width: 100%;
 }
 
 .landing {
-  height: 70vh;
-  background: #282632;
+  height: 100vh;
+  background: url(/images/landing.jpeg?a0b7f235218c3f5739814be1f845c324) no-repeat center;
+  background-size: cover;
+  width: 100%;
 }
 
 .landing .inner-landing {
   padding: 4em 0 0 0;
   border: 1px solid #fff;
+  position: relative;
 }
 
 .landing .inner-landing .col-3 {
@@ -134,5 +170,14 @@ section {
   width: 60%;
   float: left;
   border: 1px solid #fff;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  content: "";
+  height: 100%;
+  background: black;
+  opacity: .9;
 }
 

@@ -2,10 +2,13 @@
 
 @section('content')
     <section class = "landing">
+        <div class = "overlay"></div>
         <div class="inner-landing">
             <div class="col-3">
                 <div class="content">
-                    <span></span>
+                    <span>Lorem </span>
+                    Something is here
+                    Loading
                 </div>
             </div>
             <div class="col-5">
@@ -15,7 +18,7 @@
     </section>
 @endsection
 
-@section('content')
+@section('feature')
     <section class = "feature">
         <div>
             Inner feature

@@ -6,6 +6,7 @@
  */
 
 @import "_partials/_fonts";
+@import "_partials/_mixins";
 @import "_partials/_vars";
 
  * {
@@ -87,6 +88,25 @@ header {
                 }
             }
         }
+        &.scrolled {
+            position: fixed;
+            padding: 2em 5em;
+            background: $theme-p-white;
+            top: 0;
+            @include box-shadow(0px, 2px, 2px, 0px, rgba(0,0,0,.3));
+            @include transition(0.5s,ease-in-out);
+            width: 100%;
+            animation: slideInDown 5ms 2ms .3s;
+            @media(max-width:768px) {
+                padding: 0em 2em;
+            }
+            li a {
+                color: black;
+                &:hover {
+                    color: $theme-p-white;
+                }
+            }
+        }
     }
 }
 section {
@@ -94,11 +114,14 @@ section {
     width: 100%;
 }
 .landing {
-    height: 70vh;
-    background: rgb(40, 38, 50);
+    height: 100vh;
+    background: url(../images/landing.jpeg) no-repeat center;
+    background-size:cover;
+    width: 100%;
     .inner-landing {
       padding: 4em 0 0 0;
       border:1px solid #fff;
+      position: relative;
       .col-3 {
         width: 30.3%;
         min-height: 1px;
@@ -110,4 +133,12 @@ section {
         border: 1px solid #fff;
       }
     }
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    content: "";
+    height: 100%;
+    background: rgb(0,0,0);
+    opacity: .9;
 }
