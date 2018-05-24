@@ -21,14 +21,19 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu|Titillium+Web" rel="stylesheet">
+    
 </head>
 <body>
-    @include('inc.navbar')
-    @yield('content')
-    @yield('feature')
+    <div id ="app">
+        @include('inc.navbar')
+        @yield('content')
+        @yield('feature')
+    </div>
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
