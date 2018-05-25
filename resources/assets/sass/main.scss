@@ -17,6 +17,7 @@ html, body {
     @include font-raleway;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 .top-right {
     position: absolute;
@@ -96,9 +97,9 @@ header {
             @include box-shadow(0px, 2px, 2px, 0px, rgba(0,0,0,.3));
             @include transition(0.5s,ease-in-out);
             width: 100%;
-            animation: slideInDown 5ms 2ms .3s;
+            animation: slideInDown 5ms 2ms;
             @media(max-width:768px) {
-                padding: 0em 2em;
+                padding: 0 2em;
             }
             li a {
                 color: black;
@@ -119,8 +120,7 @@ section {
     background-size:cover;
     width: 100%;
     .inner-landing {
-      padding: 4em 0 0 0;
-      border:1px solid #fff;
+      padding: 9em 0 0 0;
       position: relative;
       .col-3 {
         width: 30.3%;
@@ -130,10 +130,10 @@ section {
       .col-5 {
         width: 60%;
         float: left;
-        border: 1px solid #fff;
       }
       .content {
-          padding: 4em;
+          padding: 10em 0 0;
+          line-height: 35px;
           h3 {
               @include font-Titillium;
               font-weight: bold;
@@ -156,12 +156,11 @@ section {
           }
       }
       .inner-col {
-          padding: 4em;
+          padding-left: 15em;
           .asset {
-         // background: url(../images/macbook_pro.png) no-repeat center;
           background-size: contain;
-          width: 100%;
-          height: 250px;
+          width: 450px;
+          height: 450px;
           }
       }
     }
@@ -193,8 +192,7 @@ section {
 
 .col-2-1 {
     width: 60%;
-    height: auto;
-    margin: auto;
+    float: left;
     @media(max-width: 768px) {
         width: 98%;
     }
@@ -224,5 +222,20 @@ section {
     float: left;
     @media (max-width: 992px) {
         width: 98%;
+    }
+}
+
+.feature {
+    margin: 0;
+    width: 100%;
+    .inner-feature {
+        padding-top: 10px;
+        h3 {
+            @include font-Montserrat;
+            font-size: 20px;
+            font-weight: bold;
+            color: $theme-black;
+            text-align: center;
+        }
     }
 }

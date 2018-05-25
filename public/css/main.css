@@ -16,6 +16,7 @@ body {
   font-family: 'Raleway', sans-serif;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .top-right {
@@ -121,14 +122,14 @@ header .nav.scrolled {
   -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
   width: 100%;
-  -webkit-animation: slideInDown 5ms 2ms .3s;
-          animation: slideInDown 5ms 2ms .3s;
+  -webkit-animation: slideInDown 5ms 2ms;
+          animation: slideInDown 5ms 2ms;
 }
 
 @media (max-width: 768px) {
   header nav.scrolled,
   header .nav.scrolled {
-    padding: 0em 2em;
+    padding: 0 2em;
   }
 }
 
@@ -155,8 +156,7 @@ section {
 }
 
 .landing .inner-landing {
-  padding: 4em 0 0 0;
-  border: 1px solid #fff;
+  padding: 9em 0 0 0;
   position: relative;
 }
 
@@ -169,11 +169,11 @@ section {
 .landing .inner-landing .col-5 {
   width: 60%;
   float: left;
-  border: 1px solid #fff;
 }
 
 .landing .inner-landing .content {
-  padding: 4em;
+  padding: 10em 0 0;
+  line-height: 35px;
 }
 
 .landing .inner-landing .content h3 {
@@ -201,13 +201,13 @@ section {
 }
 
 .landing .inner-landing .inner-col {
-  padding: 4em;
+  padding-left: 15em;
 }
 
 .landing .inner-landing .inner-col .asset {
   background-size: contain;
-  width: 100%;
-  height: 250px;
+  width: 450px;
+  height: 450px;
 }
 
 .overlay {
@@ -238,8 +238,7 @@ section {
 
 .col-2-1 {
   width: 60%;
-  height: auto;
-  margin: auto;
+  float: left;
 }
 
 @media (max-width: 768px) {
@@ -286,5 +285,22 @@ section {
   .col-4-12-2 {
     width: 98%;
   }
+}
+
+.feature {
+  margin: 0;
+  width: 100%;
+}
+
+.feature .inner-feature {
+  padding-top: 10px;
+}
+
+.feature .inner-feature h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #070600;
+  text-align: center;
 }
 
